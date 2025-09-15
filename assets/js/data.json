@@ -1,0 +1,98 @@
+{
+  "headings": {
+    "en": {
+      "navTitle": "Census 2027",
+      "latestNews": "Latest News",
+      "viewAll": "View All",
+      "supportingDocs": "Supporting Documents",
+      "circulars": "Circulars",
+      "manuals": "Manuals",
+      "tutorials": "Tutorials",
+      "followUs": "Follow Us",
+      "allNews": "All News",
+      "pdfPlaceholder": "Click on a document to view PDF"
+    },
+    "hi": {
+      "navTitle": "जनगणना 2027",
+      "latestNews": "ताज़ा समाचार",
+      "viewAll": "सभी समाचार देखें",
+      "supportingDocs": "सहायक जनगणना दस्तावेज़",
+      "circulars": "जनगणना परिपत्र",
+      "manuals": "जनगणना पुस्तिकाएं / मार्गदर्शन",
+      "tutorials": "शैक्षिक वीडियो / पाठ्यक्रम",
+      "followUs": "हमारे साथ जुड़ें",
+      "allNews": "सभी समाचार",
+      "pdfPlaceholder": "पीडीएफ देखने के लिए दस्तावेज़ पर क्लिक करें"
+    }
+  },
+  "news": {
+    "en": [
+      {
+        "title": "Press Release 22 July 2025",
+        "link": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2146780",
+        "date": "2025-07-22"
+      },
+      {
+        "title": "Press Release 4 June 2025",
+        "link": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2133845",
+        "date": "2025-06-04"
+      }
+    ],
+    "hi": [
+      {
+        "title": "प्रेस विज्ञप्ति 22 जुलाई 2025",
+        "link": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2146780",
+        "date": "2025-07-22"
+      },
+      {
+        "title": "प्रेस विज्ञप्ति 4 जून 2025",
+        "link": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2133845",
+        "date": "2025-06-04"
+      }
+    ]
+  },
+  "achievements": {
+    "en": [
+      { "title": "Award for Excellence", "image": "assets/img/achievements/Census-logo.png", "url": "#" },
+      { "title": "ISO Certification", "image": "assets/img/achievements/news1.jpg", "url": "#" }
+    ],
+    "hi": [
+      { "title": "उत्कृष्टता पुरस्कार", "image": "assets/img/achievements/Census-logo.png", "url": "#" },
+      { "title": "आईएसओ प्रमाणन", "image": "assets/img/achievements/news1.jpg", "url": "#" }
+    ]
+  },
+  "circulars": {
+    "en": [
+      { "title": "Circular 1", "pdfUrl": "assets/pdfs/Circular-1.pdf" },
+      { "title": "Circular 2", "pdfUrl": "assets/pdfs/Circular-2.pdf" }
+    ],
+    "hi": [
+      { "title": "परिपत्र 1", "pdfUrl": "assets/pdfs/Circular-1.pdf" },
+      { "title": "परिपत्र 2", "pdfUrl": "assets/pdfs/Circular-2.pdf" }
+    ]
+  },
+  "manuals": {
+    "en": [
+      { "title": "Census Manual 1", "pdfUrl": "assets/pdfs/Circular-1.pdf" },
+      { "title": "Census Manual 2", "pdfUrl": "assets/pdfs/Circular-2.pdf" }
+    ],
+    "hi": [
+      { "title": "जनगणना पुस्तिका 1", "pdfUrl": "assets/pdfs/Circular-1.pdf" },
+      { "title": "जनगणना पुस्तिका 2", "pdfUrl": "assets/pdfs/Circular-2.pdf" }
+    ]
+  },
+  "tutorials": {
+    "en": [
+      { "title": "How to use Census App", "videoUrl": "https://www.youtube.com/embed/abcd1234" }
+    ],
+    "hi": [
+      { "title": "जनगणना ऐप का उपयोग कैसे करें", "videoUrl": "https://www.youtube.com/embed/abcd1234" }
+    ]
+  },
+  "socialMedia": [
+    { "name": "Facebook", "url": "https://www.facebook.com/share/1Axcim15d8/", "icon": "bi bi-facebook" },
+    { "name": "Instagram", "url": "https://www.instagram.com/dco__up?igsh=MW9tMHpyd21najM3aA/", "icon": "bi bi-instagram" },
+    { "name": "Threads", "url": "https://www.threads.net/@dco_up", "icon": "bi bi-threads" },
+    { "name": "Twitter (X)", "url": "https://x.com/DCO_UP/", "icon": "bi bi-twitter-x" }
+  ]
+}
