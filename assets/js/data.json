@@ -2,6 +2,7 @@
   "headings": {
     "en": {
       "navTitle": "Census 2027",
+      "achievements":"Achievements of DCO UP",
       "latestNews": "Latest News",
       "viewAll": "View All",
       "supportingDocs": "Supporting Documents",
@@ -14,6 +15,7 @@
     },
     "hi": {
       "navTitle": "जनगणना 2027",
+      "achievements":"डीसीओ यूपी की उपलब्धियां",
       "latestNews": "ताज़ा समाचार",
       "viewAll": "सभी समाचार देखें",
       "supportingDocs": "सहायक जनगणना दस्तावेज़",
@@ -54,11 +56,15 @@
   "achievements": {
     "en": [
       { "title": "Award for Excellence", "image": "assets/img/achievements/Census-logo.png", "url": "#" },
-      { "title": "ISO Certification", "image": "assets/img/achievements/news1.jpg", "url": "#" }
+      { "title": "ISO Certification", "image": "assets/img/achievements/news1.jpg", "url": "#" },
+      { "title": "PCS batch training", "image": "assets/img/achievements/pcs.jpg", "url": "#" },
+      { "title": "Award", "image": "assets/img/achievements/a1.jpg", "url": "#" }
     ],
     "hi": [
       { "title": "उत्कृष्टता पुरस्कार", "image": "assets/img/achievements/Census-logo.png", "url": "#" },
-      { "title": "आईएसओ प्रमाणन", "image": "assets/img/achievements/news1.jpg", "url": "#" }
+      { "title": "आईएसओ प्रमाणन", "image": "assets/img/achievements/news1.jpg", "url": "#" },
+      { "title": "पीसीएस बैच का प्रशिक्षण", "image": "assets/img/achievements/pcs.jpg", "url": "#" },
+      { "title": "पुरस्कार", "image": "assets/img/achievements/a1.jpg", "url": "#" }
     ]
   },
   "circulars": {

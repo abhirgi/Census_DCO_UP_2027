@@ -31,6 +31,8 @@ function renderAll() {
       document.getElementById("follow-us-title").innerText = headings.followUs;
       document.getElementById("all-news-title").innerText = headings.allNews;
       document.getElementById("pdf-placeholder").innerText = headings.pdfPlaceholder;
+      document.getElementById("achivement-section").innerText = headings.achievements;
+
 
       // ✅ Content rendering
       loadNews(data.news[currentLang]);
@@ -92,46 +94,25 @@ function loadSocialLinks(socialLinks) {
 
 // ------------------ ACHIEVEMENTS ------------------
 function loadCyclicCarousel(achievements) {
-  const track = document.getElementById("achievements-track");
-  track.innerHTML = "";
+  const carouselInner = document.querySelector("#achievementsCarousel .carousel-inner");
+  if (!carouselInner) return;
 
-  const loopAchievements = [...achievements, ...achievements];
-  loopAchievements.forEach(ach => {
+  carouselInner.innerHTML = "";
+
+  achievements.forEach((ach, index) => {
     const div = document.createElement("div");
-    div.className = "achievement-card";
+    div.className = `carousel-item text-center ${index === 0 ? "active" : ""}`;
     div.innerHTML = `
       <a href="${ach.url || '#'}" target="_blank">
-        <img src="${ach.image}" alt="${ach.title}">
+        <img src="${ach.image}" class="d-block mx-auto" alt="${ach.title}" style="max-height:300px; object-fit:contain;">
       </a>
       <p class="mt-2 fw-semibold">${ach.title}</p>
     `;
-    track.appendChild(div);
+    carouselInner.appendChild(div);
   });
-
-  const cards = document.querySelectorAll(".achievement-card");
-  if (!cards.length) return;
-
-  const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(cards[0]).marginRight);
-  let scrollX = 0;
-  const totalWidth = cardWidth * achievements.length;
-
-  function animate() {
-    scrollX += 0.5;
-    if (scrollX >= totalWidth) scrollX -= totalWidth;
-    track.style.transform = `translateX(${-scrollX}px)`;
-    requestAnimationFrame(animate);
-  }
-  animate();
-
-  document.getElementById("next-btn").onclick = () => {
-    scrollX += cardWidth;
-    if (scrollX >= totalWidth) scrollX -= totalWidth;
-  };
-  document.getElementById("prev-btn").onclick = () => {
-    scrollX -= cardWidth;
-    if (scrollX < 0) scrollX += totalWidth;
-  };
 }
+
+
 
 // ------------------ DOCUMENTS ------------------
 function loadDocs(containerId, docs) {

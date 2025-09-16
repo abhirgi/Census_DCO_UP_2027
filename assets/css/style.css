@@ -1,10 +1,10 @@
 .news-marquee {
-  height: 30vh;                /* 30% of viewport height */
+  height: 60vh;                /* 30% of viewport height */
   max-height: 400px;           /* don’t grow too tall on big screens */
   min-height: 20vh;            /* don’t shrink too small on mobiles */
   overflow: hidden;
   position: relative;
-  background: #f8f9fa;         
+   background: #373f452e;      
   border: 1px solid #dee2e6;   
   border-radius: 1vw;          /* rounded corners scale with screen */
   box-shadow: 0 0.5vh 2vh rgba(0,0,0,0.1); 
@@ -39,140 +39,69 @@
 }
 /* Achievements Carousel Container */
 .achievements-slider {
-  overflow: hidden;
-  width: 90%;
-  max-width: 1200px;
-  margin: 2rem auto;
-  height: 35vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: #f8f9fa;
-  border: 2px solid #000;
+  width: 100%;
+  max-width: 500px;       /* container ki max width */
+  height: 400px;          /* fixed height */
+  margin: 2rem auto;      /* center horizontally */
+  padding: 1rem;          /* andar thoda gap */
+  background: #373f452e;   /* halka background */
   border-radius: 12px;
-  padding: 1rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.achievements-track {
-  display: flex;
-  align-items: center;
-  will-change: transform;
+.achievements-slider .carousel-inner {
+  height: 100%;
+   align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
 }
 
-.achievement-card {
-  flex: 0 0 32%;
-  margin: 0 1%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.8;
-}
-
-.achievement-card img {
-  width: 100%;
-  height: 25vh;
-  object-fit: contain;
+.achievements-slider .carousel-item img {
+       /* container ke andar fit ho */
+  object-fit: contain;    /* image cut na ho, puri dikhai de */
+  margin: auto;           /* center me rahe */
+  display: block;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.achievement-card.center {
-  transform: scale(1.2);
-  opacity: 1;
-  z-index: 2;
-}
-
-.achievement-card.side {
-  transform: scale(0.9);
-  opacity: 0.7;
-  z-index: 1;
-}
-.pdf-viewer {
-  background: #f8f9fa;
-  border: 1px solid #000;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-top: 1rem;
-}
-.pdf-placeholder {
-  font-size: 1.2rem;
-  color: #6c757d;
-}
-
-#social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #007bff;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
-
-#social-links a:hover {
-  background: #0056b3;
-  transform: scale(1.1);
-}
-
-.social-link {
-  font-size: 2rem;
-  color: #000; /* Black */
-  transition: color 0.3s ease;
-}
-
-.social-link:hover {
-  color: #555; /* Grey on hover */
-}
-
-#social-media svg {
-  width: 2rem;
-  height: 2rem;
-  fill: #000; /* Black */
-  transition: fill 0.3s ease;
-}
-
-#social-media svg:hover {
-  fill: #555; /* Grey on hover */
-}
-.badge {
-  font-size: 0.7rem;
-  vertical-align: middle;
+  padding: 50px;
 }
 
 
-/* Prev/Next buttons */
-#prev-btn, #next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-#prev-btn { left: 15px; }
-#next-btn { right: 15px; }
-#prev-btn:hover, #next-btn:hover { opacity: 1; }
-
-
-
-/* Center focus */
-.achievement-card:nth-child(3n) {  /* every 3rd card as center approx */
-  transform: scale(1.2);
-  opacity: 1;
-  z-index: 2;
+.achievements-slider img {
+  max-height: 350px;
+  max-width: 100%;
+  object-fit: contain;   /* image crop nahi hogi */
+  margin: 0 auto;
+  display: block;
 }
 
+.achievements-slider p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 70% 70%;
+   
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+   height: 10%;
+    margin: auto;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* hover par black bg */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* black icon visible on light bg */
+}
 #tutorials-list {
   display: flex;
   flex-wrap: wrap;
@@ -184,7 +113,9 @@
   border: none;
   border-radius: 8px;
 }
-
+.list-group-item{
+  background: #373f452e;
+}
 
 
 /* Continuous scroll animation */

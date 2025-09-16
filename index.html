@@ -20,24 +20,59 @@
   </nav>
 
   <!-- Latest News -->
-  <section class="container my-4">
-    <h3 id="latest-news-title">Latest News</h3>
-    <div class="news-marquee">
-      <ul id="news-list"></ul>
-    </div>
-    <div class="text-end mt-2">
-      <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#allNewsModal" id="view-all-btn">
-        View All
-      </button>
+  <section class="container my-4 bg-light p-4 rounded shadow-sm">
+    <div class="row">
+
+      <!-- Latest News (col-6) -->
+      <div class="col-md-6">
+        <h3 id="latest-news-title">Latest News</h3>
+        <div class="news-marquee">
+          <ul id="news-list"></ul>
+        </div>
+        <div class="text-end mt-2">
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#allNewsModal"
+            id="view-all-btn">
+            View All
+          </button>
+        </div>
+      </div>
+
+      <!-- Achievements (col-6) -->
+      <div class="col-md-6">
+        <h3 class="text-center mb-3" id ="achivement-section">Achievements</h3>
+        <div class="achievements-slider">
+          
+          <div id="achievementsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+            <div class="carousel-inner">
+              <div class="carousel-item active text-center">
+                <img src="assets/img/achievements/Census-logo.png" alt="Award for Excellence">
+                <p class="mt-2 fw-semibold">Award for Excellence</p>
+              </div>
+              <div class="carousel-item text-center">
+                <img src="assets/img/achievements/news1.jpg" alt="ISO Certification">
+                <p class="mt-2 fw-semibold">ISO Certification</p>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#achievementsCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#achievementsCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Achievements -->
-  <section class="achievements-slider">
-    <button id="prev-btn">❮</button>
-    <div class="achievements-track" id="achievements-track"></div>
-    <button id="next-btn">❯</button>
-  </section>
 
   <!-- Supporting Documents -->
   <section class="container my-4">
