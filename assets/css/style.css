@@ -21,7 +21,7 @@
 
 /* List items responsive */
 .news-marquee .list-group-item {
-  font-size: 2.5vw;          /* viewport width ke hisab se font-size */
+  font-size: 21px;          /* viewport width ke hisab se font-size */
   background: transparent;
   border: none;
   color: #212529;
