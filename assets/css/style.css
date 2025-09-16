@@ -1,41 +1,49 @@
+/* News Marquee */
 .news-marquee {
-  height: 60vh;                /* 30% of viewport height */
-  max-height: 400px;           /* don’t grow too tall on big screens */
-  min-height: 20vh;            /* don’t shrink too small on mobiles */
+  height: auto;             /* height flexible rakho */
+  max-height: 60vh;         /* max viewport height */
+  min-height: 20vh;
   overflow: hidden;
   position: relative;
-   background: #373f452e;      
-  border: 1px solid #dee2e6;   
-  border-radius: 1vw;          /* rounded corners scale with screen */
-  box-shadow: 0 0.5vh 2vh rgba(0,0,0,0.1); 
-  padding: 2vh 2vw;            /* spacing adjusts with screen */
+  background: #373f452e;
+  border: 1px solid #dee2e6;
+  border-radius: 1vw;
+  box-shadow: 0 0.5vh 2vh rgba(0,0,0,0.1);
+  padding: 2vh 2vw;
 }
 
+/* Marquee list */
 .news-marquee .list-group {
   animation: scroll-up 15s linear infinite;
+  margin: 0;
+  padding: 0;
 }
 
-.news-marquee .list-group-item i {
-  color: #0d6efd;       /* Bootstrap primary color */
-  font-size: 1.5rem;    /* adjust icon size */
-}
-
+/* List items responsive */
 .news-marquee .list-group-item {
+  font-size: 2.5vw;          /* viewport width ke hisab se font-size */
   background: transparent;
   border: none;
   color: #212529;
   font-weight: 500;
-  font-size: 2vh;              /* scales text with screen */
+  padding: 0.5rem 0;
 }
 
+/* Hover effect */
 .news-marquee .list-group-item:hover {
   background: #e9ecef;
   color: #0d6efd;
 }
 
+/* Scroll animation */
 @keyframes scroll-up {
   0%   { transform: translateY(100%); }
   100% { transform: translateY(-100%); }
+}
+
+.news-marquee .list-group-item i {
+  color: #0d6efd;       /* Bootstrap primary color */
+  font-size: 3vw;        /* viewport width ke hisab se scale hoga */
 }
 /* Achievements Carousel Container */
 .achievements-slider {
