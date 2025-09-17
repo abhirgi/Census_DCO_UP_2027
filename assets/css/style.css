@@ -1,4 +1,60 @@
 /* ---------------- News Marquee ---------------- */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Multiple backgrounds: gradient + watermark image */
+  background-image: 
+    linear-gradient(rgba(199,124,34,0.85), rgba(78,122,78,0.85)),
+    url('assets/img/logo-watermark.png');
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* parallax effect stable rahe */
+}
+/* Optional: smooth color shift on hover (just for fun) */
+
+/* Make all sections have some transparency so background is visible */
+section {
+  background: rgb(255 231 231 / 30%);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #212529;
+  font-weight: 700;
+}
+
+/* Navbar background tweak to blend with body */
+.navbar {
+  background: rgba(0,0,0,0.7);
+  transition: background 0.3s ease;
+}
+
+/* Navbar hover effect */
+.navbar:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.8);
+  color: #f8f9fa;
+  padding: 1.5rem 0;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
 .news-marquee {
   height: 30vh;            /* fix height = 30% of viewport */
   overflow: hidden;        /* andar ka content scroll hoga */
@@ -39,6 +95,7 @@
 #achievementsCarousel {
   position: relative;
   margin: 0 auto;
+  background: rgb(15 13 13 / 20%);
 }
 
 #achievementsCarousel .carousel-indicators {
@@ -130,4 +187,33 @@
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.7);  /* solid black hover */
+}
+
+
+#circulars-list .list-group-item {
+  font-weight: 600;          /* thoda bold */
+  font-size: 1rem;           /* base font size */
+  line-height: 1.5;          /* spacing between lines */
+  color: #212529;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;     /* thoda zyada padding for mobile */
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive font size for smaller devices */
+@media (max-width: 768px) {
+  #circulars-list .list-group-item {
+    font-size: 1.1rem;       /* thoda bada for mobile */
+    font-weight: 700;        /* bold for better readability */
+  }
+}
+
+/* PDF placeholder center styling */
+.pdf-placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6c757d;
+  text-align: center;
 }
