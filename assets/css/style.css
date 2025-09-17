@@ -1,9 +1,7 @@
-/* News Marquee */
+/* ---------------- News Marquee ---------------- */
 .news-marquee {
-  height: auto;             /* height flexible rakho */
-  max-height: 60vh;         /* max viewport height */
-  min-height: 20vh;
-  overflow: hidden;
+  height: 30vh;            /* fix height = 30% of viewport */
+  overflow: hidden;        /* andar ka content scroll hoga */
   position: relative;
   background: #373f452e;
   border: 1px solid #dee2e6;
@@ -12,16 +10,14 @@
   padding: 2vh 2vw;
 }
 
-/* Marquee list */
 .news-marquee .list-group {
   animation: scroll-up 15s linear infinite;
   margin: 0;
   padding: 0;
 }
 
-/* List items responsive */
 .news-marquee .list-group-item {
-  font-size: 21px;          /* viewport width ke hisab se font-size */
+  font-size: 21px;
   background: transparent;
   border: none;
   color: #212529;
@@ -29,109 +25,109 @@
   padding: 0.5rem 0;
 }
 
-/* Hover effect */
 .news-marquee .list-group-item:hover {
   background: #e9ecef;
   color: #0d6efd;
 }
 
-/* Scroll animation */
 @keyframes scroll-up {
-  0%   { transform: translateY(100%); }
+  0% { transform: translateY(100%); }
   100% { transform: translateY(-100%); }
 }
 
-.news-marquee .list-group-item i {
-  color: #0d6efd;       /* Bootstrap primary color */
-  font-size: 3vw;        /* viewport width ke hisab se scale hoga */
-}
-/* Achievements Carousel Container */
-.achievements-slider {
-  width: 100%;
-  max-width: 500px;       /* container ki max width */
-  height: 400px;          /* fixed height */
-  margin: 2rem auto;      /* center horizontally */
-  padding: 1rem;          /* andar thoda gap */
-  background: #373f452e;   /* halka background */
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.achievements-slider .carousel-inner {
-  height: 100%;
-   align-items: center;     /* vertical center */
-  justify-content: center; /* horizontal center */
-}
-
-.achievements-slider .carousel-item img {
-       /* container ke andar fit ho */
-  object-fit: contain;    /* image cut na ho, puri dikhai de */
-  margin: auto;           /* center me rahe */
-  display: block;
-  border-radius: 8px;
-  padding: 50px;
-}
-
-
-.achievements-slider img {
-  max-height: 350px;
-  max-width: 100%;
-  object-fit: contain;   /* image crop nahi hogi */
+/* ---------------- Achievements Carousel ---------------- */
+#achievementsCarousel {
+  position: relative;
   margin: 0 auto;
+}
+
+#achievementsCarousel .carousel-indicators {
+  bottom: 1rem;              /* neeche se gap */
+}
+
+/* Carousel Image */
+.carousel-img {
+  width: 100%;           /* hamesha container ke andar fit ho */
+  height: 65vh;          /* container height */
+  max-width: 100%;       /* kabhi container se bada na ho */
+  max-height: 100%;      /* kabhi container se height zyada na ho */
+  object-fit: cover;     /* container fill kare, thoda crop hoga */
+  margin: 0 !important;  
+  padding: 0 !important;
   display: block;
+  border-radius: 6px;
 }
 
-.achievements-slider p {
-  margin-top: 0.5rem;
+/* Optional: Mobile specific adjustment */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 40vh;       /* mobile pe chhota karo */
+    object-fit: cover;  /* container fill kare */
+  }
+}
+
+/* Carousel Caption */
+.carousel-caption {
+           /* image aur caption ke beech gap */
+  background: rgba(0,0,0,0.3);  /* halka black */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  bottom: 2rem !important;
+}
+
+
+.carousel-caption h5 {
+  color: #fff;
   font-weight: 600;
-  font-size: 1.1rem;
-  color: #333;
+  margin: 0;
 }
 
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 70% 70%;
-   
+.carousel-caption p {
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
+/* Carousel Indicators */
+.carousel-indicators {
+  bottom: 7% !important;
+  background: #756e6e !important;
+  height: 10% !important;
+
+ 
+}
+
+.carousel-indicators button {
+  background-color: rgba(0,0,0,0.4); /* halka black */
+  border-radius: 50%;
+}
+
+.carousel-indicators button.active {
+  background-color: rgba(0,0,0,0.8); /* dark on active */
+}
+
+.carousel-indicators button:hover {
+  background-color: rgba(0,0,0,1); /* hover dark black */
+}
+
+/* Carousel Controls */
 .carousel-control-prev,
 .carousel-control-next {
-  width: 10%;
-   height: 10%;
-    margin: auto;
-}
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* hover par black bg */
+  width: 5%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: invert(1); /* black icon visible on light bg */
-}
-#tutorials-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* horizontal center */
-  gap: 1rem; /* thoda space between videos */
-}
-
-#tutorials-list iframe {
-  border: none;
-  border-radius: 8px;
-}
-.list-group-item{
-  background: #373f452e;
+  filter: invert(0); /* dark icons */
+  background-size: 100% 100%;
+  background-color: rgba(0, 0, 0, 0.3);  /* halka black */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.3s ease;
 }
 
-
-/* Continuous scroll animation */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* adjust based on number of cards */
-  }
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.7);  /* solid black hover */
 }

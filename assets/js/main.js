@@ -31,7 +31,7 @@ function renderAll() {
       document.getElementById("follow-us-title").innerText = headings.followUs;
       document.getElementById("all-news-title").innerText = headings.allNews;
       document.getElementById("pdf-placeholder").innerText = headings.pdfPlaceholder;
-      document.getElementById("achivement-section").innerText = headings.achievements;
+      document.getElementById("achievement-section").innerText = headings.achievements;
 
 
       // ✅ Content rendering
@@ -95,20 +95,39 @@ function loadSocialLinks(socialLinks) {
 // ------------------ ACHIEVEMENTS ------------------
 function loadCyclicCarousel(achievements) {
   const carouselInner = document.querySelector("#achievementsCarousel .carousel-inner");
-  if (!carouselInner) return;
+  const carouselIndicators = document.querySelector("#achievementsCarousel .carousel-indicators");
 
+  if (!carouselInner || !carouselIndicators) return;
+
+  // clear old data
   carouselInner.innerHTML = "";
+  carouselIndicators.innerHTML = "";
 
   achievements.forEach((ach, index) => {
+    // Add item
     const div = document.createElement("div");
     div.className = `carousel-item text-center ${index === 0 ? "active" : ""}`;
     div.innerHTML = `
       <a href="${ach.url || '#'}" target="_blank">
-        <img src="${ach.image}" class="d-block mx-auto" alt="${ach.title}" style="max-height:300px; object-fit:contain;">
+        <img src="${ach.image}" class="d-block mx-auto carousel-img "
+             alt="${ach.title}"
+             style="max-height:300px; object-fit:contain;">
       </a>
       <p class="mt-2 fw-semibold">${ach.title}</p>
     `;
     carouselInner.appendChild(div);
+
+    // Add indicator
+    const button = document.createElement("button");
+    button.type = "button";
+    button.setAttribute("data-bs-target", "#achievementsCarousel");
+    button.setAttribute("data-bs-slide-to", index);
+    button.setAttribute("aria-label", `Slide ${index + 1}`);
+    if (index === 0) {
+      button.className = "active";
+      button.setAttribute("aria-current", "true");
+    }
+    carouselIndicators.appendChild(button);
   });
 }
 
