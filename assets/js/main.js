@@ -35,16 +35,55 @@ function renderAll() {
 
 
       // ✅ Content rendering
+      loadDistricts(data.districts);
       loadNews(data.news[currentLang]);
       loadCyclicCarousel(data.achievements[currentLang]);
       loadDocs("circulars-list", data.circulars[currentLang]);
       loadDocs("manuals-list", data.manuals[currentLang]);
       loadTutorials(data.tutorials[currentLang]);
       loadSocialLinks(data.socialMedia);
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("district")) {
+        showDistrict(params.get("district"));
+      }
+      
     });
 }
 
 // ------------------ NEWS ------------------
+function loadDistricts(districts) {
+  const dropdown = document.getElementById("district-dropdown");
+  districts.forEach(d => {
+    const li = document.createElement("li");
+    const link = document.createElement("a");
+    link.className = "dropdown-item";
+    link.href = `?district=${encodeURIComponent(d)}`;
+    link.textContent = d;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      history.pushState(null, "", `?district=${encodeURIComponent(d)}`);
+      showDistrict(d);
+    });
+
+    li.appendChild(link);
+    dropdown.appendChild(li);
+  });
+}
+
+// Show District Page dynamically
+function showDistrict(district) {
+  const section = document.getElementById("district-section"); // wahi section jo alert me hai
+  const title = document.getElementById("district-title");
+  const msg = document.getElementById("district-message");
+
+  // Section visible karo
+  section.style.display = "block";
+
+  // Dynamic content set karo
+  title.textContent = `Welcome District Incharge — ${district}`;
+  msg.textContent = `This is the dedicated portal section for ${district} district.`;
+}
 function loadNews(news) {
   const list = document.getElementById("news-list");
   list.className = "list-group";

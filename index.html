@@ -14,10 +14,44 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#" id="nav-title">Census 2027</a>
-      <button id="lang-toggle" class="btn btn-sm btn-outline-light ms-auto">हिन्दी / English</button>
+      <!-- Home Button -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html" id="home-btn">
+        <i class="bi bi-house-door-fill me-2"></i>
+        <span id="nav-title">Census 2027</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <!-- District Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Select District
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" id="district-dropdown">
+              <!-- JS will populate 75 districts -->
+            </ul>
+          </li>
+
+          <!-- Language Toggle -->
+          <li class="nav-item ms-3">
+            <button id="lang-toggle" class="btn btn-sm btn-outline-light">हिन्दी / English</button>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
+
+  <!-- District Welcome Section -->
+  <section class="container my-4" id="district-section" style="display:none;">
+    <div class="alert alert-primary text-center shadow-sm">
+      <h2 id="district-title"></h2>
+      <p id="district-message"></p>
+    </div>
+  </section>
 
   <!-- Latest News -->
   <section class="container my-4 bg-light p-4 rounded shadow-sm">
@@ -37,31 +71,24 @@
     </div>
   </section>
 
-  <!-- Achievements (new full-width row) -->
-<section class="container my-4 bg-light p-4 rounded shadow-sm">
-  <h3 class="text-center mb-4" id="achievement-section">Achievements</h3>
+  <!-- Achievements -->
+  <section class="container my-4 bg-light p-4 rounded shadow-sm">
+    <h3 class="text-center mb-4" id="achievement-section">Achievements</h3>
 
-  <div id="achievementsCarousel" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicators -->
-    <div class="carousel-indicators" id="carousel-indicators"></div>
+    <div id="achievementsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators" id="carousel-indicators"></div>
+      <div class="carousel-inner" id="carousel-inner"></div>
 
-    <!-- Slides -->
-    <div class="carousel-inner" id="carousel-inner"></div>
-
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#achievementsCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#achievementsCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</section>
-
-
-
+      <button class="carousel-control-prev" type="button" data-bs-target="#achievementsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#achievementsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
 
   <!-- Supporting Documents -->
   <section class="container my-4">
@@ -83,13 +110,13 @@
 
     <!-- Manuals -->
     <section id="manuals-section" class="my-4">
-      <h5 id="manuals-title">Manuals</h5>
+      <h3 id="manuals-title">Manuals</h3>
       <ul id="manuals-list" class="list-group mb-3"></ul>
     </section>
 
     <!-- Tutorials -->
     <section id="tutorials-section" class="my-4 text-center">
-      <h5 id="tutorials-title">Tutorials</h5>
+      <h3 id="tutorials-title">Tutorials</h3>
       <div id="tutorials-list"></div>
     </section>
 

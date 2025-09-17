@@ -190,8 +190,8 @@ footer {
 }
 
 
-#circulars-list .list-group-item {
-  font-weight: 600;          /* thoda bold */
+ .list-group-item {
+  font-weight: 700;          /* thoda bold */
   font-size: 1rem;           /* base font size */
   line-height: 1.5;          /* spacing between lines */
   color: #212529;
