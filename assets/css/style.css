@@ -6,9 +6,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   /* Multiple backgrounds: gradient + watermark image */
-  background-image: 
-    linear-gradient(rgba(199,124,34,0.85), rgba(78,122,78,0.85)),
-    url('assets/img/logo-watermark.png');
+ background: linear-gradient(rgb(255 153 31 / 85%), rgba(78, 122, 78, 0.82)), url(../img/achievements/Census-logo.png);
 
   background-position: center;
   background-size: cover;
@@ -19,13 +17,15 @@ body {
 
 /* Make all sections have some transparency so background is visible */
 section {
-  background: rgb(255 231 231 / 30%);
-  border-radius: 1rem;
+  background: rgba(255, 231, 231, 0.3);
+  border: 1px solid #000; /* add color */
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-top-left-radius: 30px 60px;     /* elliptical curve for top-left */
+  border-bottom-right-radius: 30px 60px; /* elliptical curve for bottom-right */
   transition: all 0.3s ease;
 }
+
 
 
 
