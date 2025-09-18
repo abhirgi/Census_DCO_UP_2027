@@ -114,16 +114,10 @@
   },
   "tutorials": {
     "en": [
-      { "title": "How to use Census App", "videoUrl": "https://www.youtube.com/embed/abcd1234" }
+      { "title": "How to use Census App", "videoUrl": "https://www.youtube.com/watch?v=Ea9Vy6EmSKU" }
     ],
     "hi": [
-      { "title": "जनगणना ऐप का उपयोग कैसे करें", "videoUrl": "https://www.youtube.com/embed/abcd1234" }
+      { "title": "जनगणना ऐप का उपयोग कैसे करें", "videoUrl": "https://www.youtube.com/watch?v=Ea9Vy6EmSKU" }
     ]
-  },
-  "socialMedia": [
-    { "name": "Facebook", "url": "https://www.facebook.com/share/1Axcim15d8/", "icon": "bi bi-facebook" },
-    { "name": "Instagram", "url": "https://www.instagram.com/dco__up?igsh=MW9tMHpyd21najM3aA/", "icon": "bi bi-instagram" },
-    { "name": "Threads", "url": "https://www.threads.net/@dco_up", "icon": "bi bi-threads" },
-    { "name": "Twitter (X)", "url": "https://x.com/DCO_UP/", "icon": "bi bi-twitter-x" }
-  ]
+  }
 }

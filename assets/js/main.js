@@ -28,7 +28,7 @@ function renderAll() {
       document.getElementById("circulars-title").innerText = headings.circulars;
       document.getElementById("manuals-title").innerText = headings.manuals;
       document.getElementById("tutorials-title").innerText = headings.tutorials;
-      document.getElementById("follow-us-title").innerText = headings.followUs;
+   
       document.getElementById("all-news-title").innerText = headings.allNews;
       document.getElementById("pdf-placeholder").innerText = headings.pdfPlaceholder;
       document.getElementById("achievement-section").innerText = headings.achievements;
@@ -112,24 +112,7 @@ function loadNews(news) {
   });
 }
 
-// ------------------ SOCIAL MEDIA ------------------
-function loadSocialLinks(socialLinks) {
-  const container = document.getElementById("social-links");
-  container.innerHTML = "";
 
-  socialLinks.forEach(link => {
-    const a = document.createElement("a");
-    a.href = link.url;
-    a.target = "_blank";
-    a.className = "mx-2 fs-4 text-dark";
-    if (link.iconSvg) {
-      a.innerHTML = link.iconSvg;
-    } else {
-      a.innerHTML = `<i class="${link.icon}"></i>`;
-    }
-    container.appendChild(a);
-  });
-}
 
 // ------------------ ACHIEVEMENTS ------------------
 function loadCyclicCarousel(achievements) {

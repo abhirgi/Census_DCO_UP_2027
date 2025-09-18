@@ -4,15 +4,31 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  /* Multiple backgrounds: gradient + watermark image */
- background: linear-gradient(rgb(255 153 31 / 85%), rgba(78, 122, 78, 0.82)), url(../img/achievements/Census-logo.png);
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;  /* parallax effect stable rahe */
+  position: relative;
+  z-index: 0; /* ensure body content is above background */
+  overflow-x: hidden;
 }
+
+/* background layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+background: linear-gradient(rgb(255 153 31 / 30%), rgba(78, 122, 78, 0.25)), url(../img/achievements/Census-logo.png);
+
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+
+
+
+  background-attachment: fixed;
+}
+
 /* Optional: smooth color shift on hover (just for fun) */
 
 /* Make all sections have some transparency so background is visible */
@@ -70,6 +86,15 @@ footer {
   animation: scroll-up 15s linear infinite;
   margin: 0;
   padding: 0;
+}
+
+/* Common styling for social icons */
+
+
+/* Optional: Add a shadow on hover */
+#social-links > a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background-color: rgb(255, 251, 251) !important;
 }
 
 .news-marquee .list-group-item {
@@ -216,4 +241,58 @@ footer {
   font-size: 1rem;
   color: #6c757d;
   text-align: center;
+}
+
+#social-bar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+  padding: 10px 5px;
+}
+
+#social-bar .social-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 45px !important;
+  height: 45px !important;
+  font-size: 20px !important;
+  border-radius: 50% !important;
+  border: 2px solid white !important;
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+/* Hover Effects */
+#social-bar .social-icon:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4) !important;
+  transform: scale(1.1);
+}
+
+/* Facebook Hover */
+.social-icon.facebook:hover {
+  background: radial-gradient(circle at 30% 107%, #d0e3ff 0%, #6699ff 45%, #3366cc 60%, #003399 90%) !important;
+  border: none !important;
+  color: white !important;
+}
+
+
+/* Instagram Hover (working) */
+.social-icon.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+  border: none !important;
+}
+
+/* Twitter Hover */
+.social-icon.twitter:hover {
+  background: radial-gradient(circle at 30% 107%, #ffffff 0%, #555555 45%, #222222 70%, #000000 90%) !important;
+  border-color: #000 !important;
+  color: white !important;
 }
