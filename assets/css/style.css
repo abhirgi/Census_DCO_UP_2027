@@ -76,12 +76,12 @@ body::before {
   }
 
   .news-marquee {
-    height: 30vh;
+    height: 20vh;
     /* fix height = 30% of viewport */
     overflow: hidden;
     /* andar ka content scroll hoga */
     position: relative;
-    background: #373f452e;
+    background: #198754;
     border: 1px solid #dee2e6;
     border-radius: 1vw;
     box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
@@ -107,7 +107,7 @@ body::before {
     font-size: 21px;
     background: transparent;
     border: none;
-    color: #212529;
+    color: #e9b875;
     font-weight: 500;
     padding: 0.5rem 0;
   }
