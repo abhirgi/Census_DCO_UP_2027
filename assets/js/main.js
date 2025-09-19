@@ -41,13 +41,52 @@ function renderAll() {
       loadDocsGrid("circulars-list", data.circulars[currentLang]);
       loadDocsGrid("manuals-list", data.manuals[currentLang]);
       loadTutorials(data.tutorials[currentLang]);
+      setupNotificationBell(data.notifications || []);
       const params = new URLSearchParams(window.location.search);
       if (params.has("district")) {
         showDistrict(params.get("district"));
       }
 
     });
+
+
 }
+
+
+function setupNotificationBell(notifications) {
+  const badge = document.getElementById('notification-badge');
+  const list = document.getElementById('notification-list');
+
+  // Badge show/hide aur count set karo
+  if (notifications && notifications.length > 0) {
+    badge.style.display = 'inline-block';
+    badge.textContent = notifications.length > 9 ? '9+' : notifications.length;
+  } else {
+    badge.style.display = 'none';
+  }
+
+  // Notification list populate karo
+  if (!notifications || notifications.length === 0) {
+    list.innerHTML = `<li class="dropdown-item text-center text-muted">No new notifications</li>`;
+  } else {
+    list.innerHTML = notifications
+      .map(n => `<li class="dropdown-item">${n.message}</li>`)
+      .join('');
+  }
+}
+
+
+
+
+// Call setup after DOM loads
+document.addEventListener('DOMContentLoaded', () => {
+  setupNotificationBell();
+});
+
+// Call this function after DOM loaded
+document.addEventListener('DOMContentLoaded', setupNotificationBell);
+
+
 
 // ------------------ NEWS ------------------
 function loadDistricts(districts) {
@@ -168,7 +207,7 @@ function loadDocsGrid(containerId, docs, cols = 4) {
     const td = document.createElement("td");
     td.textContent = doc.title;
     td.style.padding = "8px";
-    
+
     td.style.cursor = "pointer";
     td.style.color = "#000000ff";
     td.style.textDecoration = "underline";

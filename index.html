@@ -19,9 +19,10 @@
     <div class="drop" style="left: 75%; animation-delay: 1.2s;"></div>
     <div class="drop" style="left: 90%; animation-delay: 1.5s;"></div>
   </div>
-  <div id="notification-bell" class="notification-bell">
-    🔔
-  </div>
+
+
+
+
 
   <!-- Notification flag (initially hidden) -->
   <div id="notification-flag" class="notification-flag" style="display: none;">
@@ -30,38 +31,71 @@
   </div>
   
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <!-- Home Button -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html" id="home-btn">
-        <i class="bi bi-house-door-fill me-2"></i>
-        <span id="nav-title">Census 2027</span>
-      </a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Home Button -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html" id="home-btn">
+      <i class="bi bi-house-door-fill me-2"></i>
+      <span id="nav-title">Census 2027</span>
+    </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <!-- District Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              Select District
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" id="district-dropdown">
-              <!-- JS will populate 75 districts -->
-            </ul>
-          </li>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <!-- District Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Select District
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" id="district-dropdown">
+            <!-- JS will populate 75 districts -->
+          </ul>
+        </li>
 
-          <!-- Language Toggle -->
-          <li class="nav-item ms-3">
-            <button id="lang-toggle" class="btn btn-sm btn-outline-light">हिन्दी / English</button>
-          </li>
-        </ul>
-      </div>
+        <!-- Language Toggle -->
+        <li class="nav-item ms-3">
+          <button id="lang-toggle" class="btn btn-sm btn-outline-light">हिन्दी / English</button>
+        </li>
+
+        <!-- Notification Bell with Dropdown -->
+        <li class="nav-item dropdown ms-3 list-unstyled">
+          <a
+            href="#"
+            id="notification-bell"
+            class="nav-link dropdown-toggle position-relative text-white"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="font-size: 1.5rem; text-decoration: none;"
+          >
+            🔔
+            <span
+              id="notification-badge"
+              class="position-absolute top-40 start-100 translate-middle p-1 bg-danger border border-light rounded-circle
+"
+              style="display:none;"
+            ></span>
+          </a>
+
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="notification-bell"
+            id="notification-list"
+            style="min-width: 300px; max-height: 400px; overflow-y: auto;"
+          >
+            <li class="dropdown-item text-center text-muted">Loading notifications...</li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+
 
   <!-- District Welcome Section -->
   <section class="container my-4" id="district-section" style="display:none;">

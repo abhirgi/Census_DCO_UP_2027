@@ -116,6 +116,12 @@
       { "title": "परिपत्र 9", "pdfUrl": "assets/pdfs/Circular-9.pdf" }
     ]
   },
+  "notifications": [
+    { "id": 1, "message": "New census data available for district A." },
+    { "id": 2, "message": "Reminder: Update your profile before 30th Sept." },
+    { "id": 3, "message": "Population growth report published." },
+    { "id": 4, "message": "System maintenance scheduled for Sunday." }
+  ],
   "manuals": {
     "en": [
       { "title": "Census Manual 1", "pdfUrl": "assets/pdfs/Circular-1.pdf" },
