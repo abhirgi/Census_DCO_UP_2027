@@ -28,9 +28,9 @@ function renderAll() {
       document.getElementById("circulars-title").innerText = headings.circulars;
       document.getElementById("manuals-title").innerText = headings.manuals;
       document.getElementById("tutorials-title").innerText = headings.tutorials;
-   
+
       document.getElementById("all-news-title").innerText = headings.allNews;
-      document.getElementById("pdf-placeholder").innerText = headings.pdfPlaceholder;
+
       document.getElementById("achievement-section").innerText = headings.achievements;
 
 
@@ -38,15 +38,14 @@ function renderAll() {
       loadDistricts(data.districts);
       loadNews(data.news[currentLang]);
       loadCyclicCarousel(data.achievements[currentLang]);
-      loadDocs("circulars-list", data.circulars[currentLang]);
-      loadDocs("manuals-list", data.manuals[currentLang]);
+      loadDocsGrid("circulars-list", data.circulars[currentLang]);
+      loadDocsGrid("manuals-list", data.manuals[currentLang]);
       loadTutorials(data.tutorials[currentLang]);
-      loadSocialLinks(data.socialMedia);
       const params = new URLSearchParams(window.location.search);
       if (params.has("district")) {
         showDistrict(params.get("district"));
       }
-      
+
     });
 }
 
@@ -156,31 +155,43 @@ function loadCyclicCarousel(achievements) {
 
 
 // ------------------ DOCUMENTS ------------------
-function loadDocs(containerId, docs) {
-  const list = document.getElementById(containerId);
-  const pdfFrame = document.getElementById("pdf-frame");
-  const pdfPlaceholder = document.getElementById("pdf-placeholder");
+function loadDocsGrid(containerId, docs, cols = 4) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = ""; // clear previous
 
-  list.innerHTML = "";
+  const table = document.createElement("table");
+  table.style.width = "100%";
+  table.style.borderCollapse = "collapse";
 
-  docs.forEach(doc => {
-    const li = document.createElement("li");
-    li.className = "list-group-item list-group-item-action";
-    li.innerHTML = `<i class="bi bi-file-earmark-pdf-fill text-danger me-2"></i>${doc.title}`;
+  let tr = document.createElement("tr");
+  docs.forEach((doc, i) => {
+    const td = document.createElement("td");
+    td.textContent = doc.title;
+    td.style.padding = "8px";
 
-    li.onclick = () => {
-      pdfFrame.src = doc.pdfUrl;
-      pdfFrame.style.display = "block";
-      pdfPlaceholder.style.display = "none";
-    };
+    td.style.cursor = "pointer";
+    td.style.color = "#000000ff";
+    td.style.textDecoration = "underline";
 
-    list.appendChild(li);
+    td.onclick = () => window.open(doc.pdfUrl, "_blank");
+
+    tr.appendChild(td);
+
+    // After every 'cols' items, append the row and create new row
+    if ((i + 1) % cols === 0) {
+      table.appendChild(tr);
+      tr = document.createElement("tr");
+    }
   });
 
-  pdfFrame.src = "";
-  pdfFrame.style.display = "none";
-  pdfPlaceholder.style.display = "flex";
+  // Append remaining row if any
+  if (tr.children.length > 0) {
+    table.appendChild(tr);
+  }
+
+  container.appendChild(table);
 }
+
 
 // ------------------ TUTORIALS ------------------
 function loadTutorials(tutorials) {

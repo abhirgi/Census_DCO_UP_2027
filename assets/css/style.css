@@ -5,7 +5,8 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
-  z-index: 0; /* ensure body content is above background */
+  z-index: 0;
+  /* ensure body content is above background */
   overflow-x: hidden;
 }
 
@@ -18,281 +19,312 @@ body::before {
   height: 100%;
   width: 100%;
   z-index: -1;
-background: linear-gradient(rgb(255 153 31 / 30%), rgba(78, 122, 78, 0.25)), url(../img/achievements/Census-logo.png);
+  background: linear-gradient(rgb(240 183 114 / 93%), rgba(62, 172, 62, .80)), url(../img/achievements/Census-logo.png);
 
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-
-
-
-  background-attachment: fixed;
-}
-
-/* Optional: smooth color shift on hover (just for fun) */
-
-/* Make all sections have some transparency so background is visible */
-section {
-  background: rgba(255, 231, 231, 0.3);
-  border: 1px solid #000; /* add color */
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-top-left-radius: 30px 60px;     /* elliptical curve for top-left */
-  border-bottom-right-radius: 30px 60px; /* elliptical curve for bottom-right */
-  transition: all 0.3s ease;
-}
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
 
 
 
+      background-attachment: fixed;
+  }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: #212529;
-  font-weight: 700;
-}
+  /* Optional: smooth color shift on hover (just for fun) */
 
-/* Navbar background tweak to blend with body */
-.navbar {
-  background: rgba(0,0,0,0.7);
-  transition: background 0.3s ease;
-}
-
-/* Navbar hover effect */
-.navbar:hover {
-  background: rgba(0,0,0,0.85);
-}
-
-/* Footer */
-footer {
-  background: rgba(0,0,0,0.8);
-  color: #f8f9fa;
-  padding: 1.5rem 0;
-  text-align: center;
-  transition: background 0.3s ease;
-}
-
-.news-marquee {
-  height: 30vh;            /* fix height = 30% of viewport */
-  overflow: hidden;        /* andar ka content scroll hoga */
-  position: relative;
-  background: #373f452e;
-  border: 1px solid #dee2e6;
-  border-radius: 1vw;
-  box-shadow: 0 0.5vh 2vh rgba(0,0,0,0.1);
-  padding: 2vh 2vw;
-}
-
-.news-marquee .list-group {
-  animation: scroll-up 15s linear infinite;
-  margin: 0;
-  padding: 0;
-}
-
-/* Common styling for social icons */
+  /* Make all sections have some transparency so background is visible */
+  section {
+    background-color: rgb(137 210 177) !important;
+    border: 1px solid #000;
+    /* add color */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-top-left-radius: 30px 60px;
+    /* elliptical curve for top-left */
+    border-bottom-right-radius: 30px 60px;
+    /* elliptical curve for bottom-right */
+    transition: all 0.3s ease;
+  }
 
 
-/* Optional: Add a shadow on hover */
-#social-links > a:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  background-color: rgb(255, 251, 251) !important;
-}
 
-.news-marquee .list-group-item {
-  font-size: 21px;
-  background: transparent;
-  border: none;
-  color: #212529;
-  font-weight: 500;
-  padding: 0.5rem 0;
-}
 
-.news-marquee .list-group-item:hover {
-  background: #e9ecef;
-  color: #0d6efd;
-}
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: #212529;
+    font-weight: 700;
+  }
 
-@keyframes scroll-up {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-100%); }
-}
+  /* Navbar background tweak to blend with body */
+  .navbar {
+    background: rgba(0, 0, 0, 0.7);
+    transition: background 0.3s ease;
+  }
 
-/* ---------------- Achievements Carousel ---------------- */
-#achievementsCarousel {
-  position: relative;
-  margin: 0 auto;
-  background: rgb(15 13 13 / 20%);
-}
+  /* Navbar hover effect */
+  .navbar:hover {
+    background: rgba(0, 0, 0, 0.85);
+  }
 
-#achievementsCarousel .carousel-indicators {
-  bottom: 1rem;              /* neeche se gap */
-}
+  /* Footer */
+  footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #f8f9fa;
+    padding: 1.5rem 0;
+    text-align: center;
+    transition: background 0.3s ease;
+  }
 
-/* Carousel Image */
-.carousel-img {
-  width: 100%;           /* hamesha container ke andar fit ho */
-  height: 65vh;          /* container height */
-  max-width: 100%;       /* kabhi container se bada na ho */
-  max-height: 100%;      /* kabhi container se height zyada na ho */
-  object-fit: cover;     /* container fill kare, thoda crop hoga */
-  margin: 0 !important;  
-  padding: 0 !important;
-  display: block;
-  border-radius: 6px;
-}
+  .news-marquee {
+    height: 30vh;
+    /* fix height = 30% of viewport */
+    overflow: hidden;
+    /* andar ka content scroll hoga */
+    position: relative;
+    background: #373f452e;
+    border: 1px solid #dee2e6;
+    border-radius: 1vw;
+    box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
+    padding: 2vh 2vw;
+  }
 
-/* Optional: Mobile specific adjustment */
-@media (max-width: 768px) {
+  .news-marquee .list-group {
+    animation: scroll-up 15s linear infinite;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Common styling for social icons */
+
+
+  /* Optional: Add a shadow on hover */
+  #social-links > a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: rgb(255, 251, 251) !important;
+  }
+
+  .news-marquee .list-group-item {
+    font-size: 21px;
+    background: transparent;
+    border: none;
+    color: #212529;
+    font-weight: 500;
+    padding: 0.5rem 0;
+  }
+
+  .news-marquee .list-group-item:hover {
+    background: #e9ecef;
+    color: #0d6efd;
+  }
+
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  /* ---------------- Achievements Carousel ---------------- */
+  #achievementsCarousel {
+    position: relative;
+    margin: 0 auto;
+    background: rgb(15 13 13 / 20%);
+  }
+
+  #achievementsCarousel .carousel-indicators {
+    bottom: 1rem;
+    /* neeche se gap */
+  }
+
+  /* Carousel Image */
   .carousel-img {
-    height: 40vh;       /* mobile pe chhota karo */
-    object-fit: cover;  /* container fill kare */
+    width: 100%;
+    /* hamesha container ke andar fit ho */
+    height: 65vh;
+    /* container height */
+    max-width: 100%;
+    /* kabhi container se bada na ho */
+    max-height: 100%;
+    /* kabhi container se height zyada na ho */
+    object-fit: cover;
+    /* container fill kare, thoda crop hoga */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+    border-radius: 6px;
   }
-}
 
-/* Carousel Caption */
-.carousel-caption {
-           /* image aur caption ke beech gap */
-  background: rgba(0,0,0,0.3);  /* halka black */
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  bottom: 2rem !important;
-}
-
-
-.carousel-caption h5 {
-  color: #fff;
-  font-weight: 600;
-  margin: 0;
-}
-
-.carousel-caption p {
-  color: #fff;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-/* Carousel Indicators */
-.carousel-indicators {
-  bottom: 7% !important;
-  background: #756e6e !important;
-  height: 10% !important;
-
- 
-}
-
-.carousel-indicators button {
-  background-color: rgba(0,0,0,0.4); /* halka black */
-  border-radius: 50%;
-}
-
-.carousel-indicators button.active {
-  background-color: rgba(0,0,0,0.8); /* dark on active */
-}
-
-.carousel-indicators button:hover {
-  background-color: rgba(0,0,0,1); /* hover dark black */
-}
-
-/* Carousel Controls */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(0); /* dark icons */
-  background-size: 100% 100%;
-  background-color: rgba(0, 0, 0, 0.3);  /* halka black */
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  transition: all 0.3s ease;
-}
-
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.7);  /* solid black hover */
-}
-
-
- .list-group-item {
-  font-weight: 700;          /* thoda bold */
-  font-size: 1rem;           /* base font size */
-  line-height: 1.5;          /* spacing between lines */
-  color: #212529;
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;     /* thoda zyada padding for mobile */
-  margin-bottom: 0.5rem;
-}
-
-/* Responsive font size for smaller devices */
-@media (max-width: 768px) {
-  #circulars-list .list-group-item {
-    font-size: 1.1rem;       /* thoda bada for mobile */
-    font-weight: 700;        /* bold for better readability */
+  /* Optional: Mobile specific adjustment */
+  @media (max-width: 768px) {
+    .carousel-img {
+      height: 40vh;
+      /* mobile pe chhota karo */
+      object-fit: cover;
+      /* container fill kare */
+    }
   }
-}
 
-/* PDF placeholder center styling */
-.pdf-placeholder {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #6c757d;
-  text-align: center;
-}
-
-#social-bar {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 9999;
-  padding: 10px 5px;
-}
-
-#social-bar .social-icon {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 45px !important;
-  height: 45px !important;
-  font-size: 20px !important;
-  border-radius: 50% !important;
-  border: 2px solid white !important;
-  color: white !important;
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  text-decoration: none !important;
-  transition: all 0.3s ease-in-out !important;
-}
-
-/* Hover Effects */
-#social-bar .social-icon:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4) !important;
-  transform: scale(1.1);
-}
-
-/* Facebook Hover */
-.social-icon.facebook:hover {
-  background: radial-gradient(circle at 30% 107%, #d0e3ff 0%, #6699ff 45%, #3366cc 60%, #003399 90%) !important;
-  border: none !important;
-  color: white !important;
-}
+  /* Carousel Caption */
+  .carousel-caption {
+    /* image aur caption ke beech gap */
+    background: rgba(0, 0, 0, 0.3);
+    /* halka black */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    bottom: 2rem !important;
+  }
 
 
-/* Instagram Hover (working) */
-.social-icon.instagram:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
-  border: none !important;
-}
+  .carousel-caption h5 {
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+  }
 
-/* Twitter Hover */
-.social-icon.twitter:hover {
-  background: radial-gradient(circle at 30% 107%, #ffffff 0%, #555555 45%, #222222 70%, #000000 90%) !important;
-  border-color: #000 !important;
-  color: white !important;
-}
+  .carousel-caption p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* Carousel Indicators */
+  .carousel-indicators {
+    bottom: 7% !important;
+    background: #9a7d69 !important;
+    height: 10% !important;
+
+
+  }
+
+  .carousel-indicators button {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* halka black */
+    border-radius: 50%;
+  }
+
+  .carousel-indicators button.active {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* dark on active */
+  }
+
+  .carousel-indicators button:hover {
+    background-color: rgba(0, 0, 0, 1);
+    /* hover dark black */
+  }
+
+  /* Carousel Controls */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(0);
+    /* dark icons */
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* halka black */
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-control-prev:hover .carousel-control-prev-icon,
+  .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* solid black hover */
+  }
+
+
+  .list-group-item {
+    font-weight: 700;
+    /* thoda bold */
+    font-size: 1rem;
+    /* base font size */
+    line-height: 1.5;
+    /* spacing between lines */
+    color: #212529;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    /* thoda zyada padding for mobile */
+    margin-bottom: 0.5rem;
+  }
+
+  /* Responsive font size for smaller devices */
+  @media (max-width: 768px) {
+    #circulars-list .list-group-item {
+      font-size: 1.1rem;
+      /* thoda bada for mobile */
+      font-weight: 700;
+      /* bold for better readability */
+    }
+  }
+
+  /* PDF placeholder center styling */
+  .pdf-placeholder {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #6c757d;
+    text-align: center;
+  }
+
+  #social-bar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+    padding: 10px 5px;
+  }
+
+  #social-bar .social-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 20px !important;
+    border-radius: 50% !important;
+    border: 2px solid white !important;
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+
+  /* Hover Effects */
+  #social-bar .social-icon:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4) !important;
+    transform: scale(1.1);
+  }
+
+  /* Facebook Hover */
+  .social-icon.facebook:hover {
+    background: radial-gradient(circle at 30% 107%, #d0e3ff 0%, #6699ff 45%, #3366cc 60%, #003399 90%) !important;
+    border: none !important;
+    color: white !important;
+  }
+
+
+  /* Instagram Hover (working) */
+  .social-icon.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    border: none !important;
+  }
+
+  /* Twitter Hover */
+  .social-icon.twitter:hover {
+    background: radial-gradient(circle at 30% 107%, #ffffff 0%, #555555 45%, #222222 70%, #000000 90%) !important;
+    border-color: #000 !important;
+    color: white !important;
+  }

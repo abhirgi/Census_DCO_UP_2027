@@ -114,10 +114,10 @@
   },
   "tutorials": {
     "en": [
-      { "title": "How to use Census App", "videoUrl": "https://www.youtube.com/watch?v=Ea9Vy6EmSKU" }
+      { "title": "How to use Census App", "videoUrl": "https://www.youtube.com/embed/Ea9Vy6EmSKU" }
     ],
     "hi": [
-      { "title": "जनगणना ऐप का उपयोग कैसे करें", "videoUrl": "https://www.youtube.com/watch?v=Ea9Vy6EmSKU" }
+      { "title": "जनगणना ऐप का उपयोग कैसे करें", "videoUrl": "https://www.youtube.com/embed/Ea9Vy6EmSKU" }
     ]
   }
 }
