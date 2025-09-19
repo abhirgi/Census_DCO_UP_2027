@@ -95,11 +95,25 @@
   "circulars": {
     "en": [
       { "title": "Circular 1", "pdfUrl": "assets/pdfs/Circular-1.pdf" },
-      { "title": "Circular 2", "pdfUrl": "assets/pdfs/Circular-2.pdf" }
+      { "title": "Circular 2", "pdfUrl": "assets/pdfs/Circular-2.pdf" },
+       { "title": "Circular 3", "pdfUrl": "assets/pdfs/Circular-3.pdf" },
+      { "title": "Circular 4", "pdfUrl": "assets/pdfs/Circular-4.pdf" },
+      { "title": "Circular 5", "pdfUrl": "assets/pdfs/Circular-5.pdf" },
+      { "title": "Circular 6", "pdfUrl": "assets/pdfs/Circular-6.pdf" },
+      { "title": "Circular 7", "pdfUrl": "assets/pdfs/Circular-7.pdf" },
+      { "title": "Circular 8", "pdfUrl": "assets/pdfs/Circular-8.pdf" },
+      { "title": "Circular 9", "pdfUrl": "assets/pdfs/Circular-9.pdf" }
     ],
     "hi": [
       { "title": "परिपत्र 1", "pdfUrl": "assets/pdfs/Circular-1.pdf" },
-      { "title": "परिपत्र 2", "pdfUrl": "assets/pdfs/Circular-2.pdf" }
+      { "title": "परिपत्र 2", "pdfUrl": "assets/pdfs/Circular-2.pdf" },
+       { "title": "परिपत्र 3", "pdfUrl": "assets/pdfs/Circular-3.pdf" },
+      { "title": "परिपत्र 4", "pdfUrl": "assets/pdfs/Circular-4.pdf" },
+      { "title": "परिपत्र 5", "pdfUrl": "assets/pdfs/Circular-5.pdf" },
+      { "title": "परिपत्र 6", "pdfUrl": "assets/pdfs/Circular-6.pdf" },
+      { "title": "परिपत्र 7", "pdfUrl": "assets/pdfs/Circular-7.pdf" },
+      { "title": "परिपत्र 8", "pdfUrl": "assets/pdfs/Circular-8.pdf" },
+      { "title": "परिपत्र 9", "pdfUrl": "assets/pdfs/Circular-9.pdf" }
     ]
   },
   "manuals": {
