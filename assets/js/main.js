@@ -168,7 +168,7 @@ function loadDocsGrid(containerId, docs, cols = 4) {
     const td = document.createElement("td");
     td.textContent = doc.title;
     td.style.padding = "8px";
-
+    
     td.style.cursor = "pointer";
     td.style.color = "#000000ff";
     td.style.textDecoration = "underline";
